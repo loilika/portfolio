@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oryna — Portfolio</title>
+  <meta name="description" content="Oryna — Game & App Dev (Unity, UI/UX), portfolio, contacts." />
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230ea5e9'/><text x='50' y='60' font-size='44' text-anchor='middle' fill='white'>O</text></svg>">
+  <!-- Tailwind CSS по CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Небольшой кастом -->
+  <style>
+    html { scroll-behavior:smooth; }
+    .btn { @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-600 text-white hover:bg-sky-700 transition; }
+    .btn-secondary { @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-sky-600 text-sky-700 hover:bg-sky-50 transition; }
+    .chip { @apply inline-block rounded-full bg-sky-100 text-sky-700 px-3 py-1 text-xs; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <!-- Навбар -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold text-slate-900">Oryna • Portfolio</a>
+      <nav class="hidden sm:flex gap-6">
+        <a href="#projects" class="hover:text-sky-700" data-i18n="nav.projects">Проекты</a>
+        <a href="#about" class="hover:text-sky-700" data-i18n="nav.about">Обо мне</a>
+        <a href="#contact" class="hover:text-sky-700" data-i18n="nav.contact">Контакты</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button class="chip" data-lang="ru">RU</button>
+        <button class="chip" data-lang="de">DE</button>
+        <button class="chip" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-50 to-transparent"></div>
+    <div class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900" data-i18n="hero.title">
+          Привет! Я Орына — Game & App Dev
+        </h1>
+        <p class="mt-4 text-slate-600" data-i18n="hero.subtitle">
+          Unity 2D/3D, UI/UX, подготовка проектов к релизу.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="btn" data-i18n="hero.ctaProjects">Смотреть проекты</a>
+          <a href="#contact" class="btn-secondary" data-i18n="hero.ctaContact">Связаться</a>
+        </div>
+        <p class="mt-3 text-xs text-slate-500" data-i18n="hero.note">Язык переключается справа, запоминается.</p>
+      </div>
+      <div class="relative">
+        <img
+          class="rounded-2xl shadow-xl w-full"
+          alt="Cover"
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' x2='1'><stop stop-color='%230ea5e9'/><stop offset='1' stop-color='%2367e8f9'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%25' y='52%25' font-size='64' font-family='Verdana' text-anchor='middle' fill='white'>Oryna • Game & App Dev</text></svg>" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-14">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold" data-i18n="projects.title">Проекты</h2>
+        <p class="text-slate-600" data-i18n="projects.subtitle">Избранные работы и учебные прототипы.</p>
+      </div>
+      <div class="text-sm text-slate-500" data-i18n="projects.hint">Клик по карточке → демо/репозиторий</div>
+    </div>
+
+    <div id="projectsGrid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Карточки добавляются скриптом -->
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-bold" data-i18n="about.title">Обо мне</h2>
+    <div class="mt-4 grid md:grid-cols-2 gap-8 items-start">
+      <p class="text-slate-700" data-i18n="about.text1">
+        Я учусь на Game & App Development, делаю игры/приложения на Unity (2D/3D), занимаюсь UI/UX и готовлю проекты к релизу.
+      </p>
+      <p class="text-slate-700" data-i18n="about.text2">
+        Люблю аккуратный дизайн, чистый код и понятные интерфейсы. Ниже — форма, чтобы быстро связаться.
+      </p>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 pb-16">
+    <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-sm">
+      <h2 class="text-2xl md:text-3xl font-bold" data-i18n="contact.title">Связаться</h2>
+      <p class="mt-2 text-slate-600" data-i18n="contact.subtitle">Письмо придёт на почту через Formspree.</p>
+      <form class="mt-6 grid md:grid-cols-2 gap-6" id="contactForm" method="POST" action="https://formspree.io/f/mdkyoylo">
+        <div class="grid gap-2">
+          <label class="text-sm text-slate-600" for="name" data-i18n="contact.name">Имя</label>
+          <input id="name" name="name" required class="rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" />
+        </div>
+        <div class="grid gap-2">
+          <label class="text-sm text-slate-600" for="email" data-i18n="contact.email">Email</label>
+          <input id="email" name="email" type="email" required class="rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400" />
+        </div>
+        <div class="md:col-span-2 grid gap-2">
+          <label class="text-sm text-slate-600" for="message" data-i18n="contact.message">Сообщение</label>
+          <textarea id="message" name="message" rows="5" required class="rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-400"></textarea>
+        </div>
+        <div class="md:col-span-2 flex items-center gap-3">
+          <button class="btn" type="submit" data-i18n="contact.send">Отправить</button>
+          <span id="formStatus" class="text-sm text-slate-500"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex items-center justify-between">
+      <span>© <span id="year"></span> Oryna</span>
+      <a href="#home" class="hover:text-sky-700" data-i18n="footer.top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    /* ====== i18n строки ====== */
+    const STRINGS = {
+      ru: {
+        nav: { projects: 'Проекты', about: 'Обо мне', contact: 'Контакты' },
+        hero: {
+          title: 'Привет! Я Орына — Game & App Dev',
+          subtitle: 'Unity 2D/3D, UI/UX, подготовка проектов к релизу.',
+          ctaProjects: 'Смотреть проекты',
+          ctaContact: 'Связаться',
+          note: 'Язык переключается справа, запоминается.',
+        },
+        projects: { title: 'Проекты', subtitle: 'Избранные работы и учебные прототипы.', hint: 'Клик по карточке → демо/репозиторий' },
+        about: {
+          title: 'Обо мне',
+          text1: 'Я учусь на Game & App Development, делаю игры/приложения на Unity (2D/3D), занимаюсь UI/UX и готовлю проекты к релизу.',
+          text2: 'Люблю аккуратный дизайн, чистый код и понятные интерфейсы. Ниже — форма, чтобы быстро связаться.'
+        },
+        contact: { title: 'Связаться', subtitle: 'Письмо придёт на почту через Formspree.', name:'Имя', email:'Email', message:'Сообщение', send:'Отправить' },
+        footer: { top: 'Наверх ↑' },
+        labels: { demo:'Демо', repo:'Репозиторий' },
+      },
+      de: {
+        nav: { projects: 'Projekte', about: 'Über mich', contact: 'Kontakt' },
+        hero: {
+          title: 'Hallo! Ich bin Oryna — Game & App Dev',
+          subtitle: 'Unity 2D/3D, UI/UX, Release-Vorbereitung.',
+          ctaProjects: 'Projekte ansehen',
+          ctaContact: 'Kontakt',
+          note: 'Sprache rechts umschalten, wird gemerkt.',
+        },
+        projects: { title: 'Projekte', subtitle: 'Ausgewählte Arbeiten & Lern-Prototypen.', hint:'Klick auf Karte → Demo/Repo' },
+        about: {
+          title: 'Über mich',
+          text1: 'Ich studiere Game & App Development, Unity (2D/3D), UI/UX und Release-Vorbereitung.',
+          text2: 'Ich mag sauberes Design, klare UI und einfachen Code. Unten ist das Kontaktformular.'
+        },
+        contact: { title:'Kontakt', subtitle:'E-Mails via Formspree.', name:'Name', email:'Email', message:'Nachricht', send:'Senden' },
+        footer: { top:'Nach oben ↑' },
+        labels: { demo:'Demo', repo:'Repository' },
+      },
+      en: {
+        nav: { projects:'Projects', about:'About', contact:'Contact' },
+        hero: {
+          title: "Hi! I'm Oryna — Game & App Dev",
+          subtitle: 'Unity 2D/3D, UI/UX, preparing projects for release.',
+          ctaProjects: 'See projects',
+          ctaContact: 'Contact',
+          note: 'Language switch on the right, remembered.',
+        },
+        projects: { title:'Projects', subtitle:'Selected works & learning prototypes.', hint:'Click card → demo/repo' },
+        about: {
+          title:'About me',
+          text1:'I study Game & App Dev, make Unity (2D/3D) apps, UI/UX, and prepare projects for release.',
+          text2:'I like clean design, simple code and clear UI. Use the form below to contact me.'
+        },
+        contact: { title:'Contact', subtitle:'Emails via Formspree.', name:'Name', email:'Email', message:'Message', send:'Send' },
+        footer: { top:'Back to top ↑' },
+        labels: { demo:'Demo', repo:'Repository' },
+      }
+    };
+
+    /* ====== Данные проектов (пример) ====== */
+    const PROJECTS = [
+      {
+        id: 'flight-or-fate',
+        title: 'Flight or Fate',
+        tags: ['Unity', '2D', 'Puzzle'],
+        demo: 'https://example.com/demo1',
+        repo: 'https://example.com/repo1',
+        cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='100%25' height='100%25' fill='%231c1c1c'/><g fill='%23a6e3a1' font-family='Verdana' font-size='52' text-anchor='middle'><text x='50%25' y='52%25'>Flight or Fate</text></g></svg>"
+      },
+      {
+        id: 'room-pilot',
+        title: 'Room Pilot',
+        tags: ['Unity', '3D', 'Prototype'],
+        demo: 'https://example.com/demo2',
+        repo: 'https://example.com/repo2',
+        cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='100%25' height='100%25' fill='%231e293b'/><g fill='%2394a3b8' font-family='Verdana' font-size='52' text-anchor='middle'><text x='50%25' y='52%25'>Room Pilot</text></g></svg>"
+      },
+      {
+        id: 'ui-kit',
+        title: 'UI Kit (React)',
+        tags: ['React', 'UI/UX'],
+        demo: 'https://example.com/demo3',
+        repo: 'https://example.com/repo3',
+        cover: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><rect width='100%25' height='100%25' fill='%230ea5e9'/><g fill='white' font-family='Verdana' font-size='52' text-anchor='middle'><text x='50%25' y='52%25'>UI Kit</text></g></svg>"
+      }
+    ];
+
+    /* ====== Рендер и язык ====== */
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+    const yearEl = $('#year'); yearEl.textContent = new Date().getFullYear();
+
+    const renderProjects = (t) => {
+      const grid = $('#projectsGrid');
+      grid.innerHTML = '';
+      PROJECTS.forEach(p => {
+        const card = document.createElement('a');
+        card.href = p.demo || p.repo || '#';
+        card.target = '_blank';
+        card.rel = 'noopener';
+        card.className = 'block rounded-xl overflow-hidden bg-white border border-slate-200 hover:shadow-lg transition';
+        card.innerHTML = `
+          <img class="w-full aspect-[12/6] object-cover" src="${p.cover}" alt="${p.title}">
+          <div class="p-4">
+            <div class="font-semibold text-slate-900">${p.title}</div>
+            <div class="mt-2 flex flex-wrap gap-2">
+              ${p.tags.map(tag => `<span class="chip">${tag}</span>`).join('')}
+            </div>
+            <div class="mt-4 flex gap-3 text-sm">
+              ${p.demo ? `<a class="btn" href="${p.demo}" target="_blank" rel="noopener">${t.labels.demo}</a>` : ''}
+              ${p.repo ? `<a class="btn-secondary" href="${p.repo}" target="_blank" rel="noopener">${t.labels.repo}</a>` : ''}
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    };
+
+    const applyI18n = (lang) => {
+      const t = STRINGS[lang] || STRINGS.ru;
+      $$('[data-i18n]').forEach(el => {
+        const path = el.getAttribute('data-i18n').split('.');
+        let val = t;
+        for (const k of path) val = val?.[k];
+        if (typeof val === 'string') el.textContent = val;
+      });
+      renderProjects(t);
+    };
+
+    let currentLang = localStorage.getItem('lang') || (navigator.language?.slice(0,2) ?? 'ru');
+    if (!['ru','de','en'].includes(currentLang)) currentLang = 'ru';
+    applyI18n(currentLang);
+
+    $$('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentLang = btn.getAttribute('data-lang');
+        localStorage.setItem('lang', currentLang);
+        applyI18n(currentLang);
+      });
+    });
+  
+    /* ====== Статус формы ====== */
+    const form = $('#contactForm');
+    const formStatus = $('#formStatus');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formStatus.textContent = '...';
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method:'POST', body:data, headers: { 'Accept':'application/json' } });
+        if (res.ok) {
+          form.reset();
+          formStatus.textContent = currentLang === 'de' ? 'Gesendet!' : currentLang === 'en' ? 'Sent!' : 'Отправлено!';
+        } else {
+          formStatus.textContent = currentLang === 'de' ? 'Fehler' : currentLang === 'en' ? 'Error' : 'Ошибка';
+        }
+      } catch {
+        formStatus.textContent = currentLang === 'de' ? 'Fehler' : currentLang === 'en' ? 'Error' : 'Ошибка';
+      }
+    });
+ 
+  </script>
+</body>
+</html>
