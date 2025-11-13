@@ -175,14 +175,13 @@
   <section id="about" class="panel" style="margin-top:18px;padding:16px">
     <h2 data-i="about.title">Обо мне</h2>
     <div class="about" style="margin-top:10px">
-      <!-- твоя фотография снизу страницы -->
       <img class="avatar" src="1.png" alt="Oryna portrait">
       <div>
         <p class="lead" data-i="about.p1">
-          Учусь на Game & Application Development. Делаю прототипы и маленькие игры на Unity (2D/3D), пишу на C#, рисую UI, собираю сайты и порталы на чистом HTML/CSS/JS.
+          Motivierte Studentin im Bereich Game & Application Development mit Leidenschaft für Spieleentwicklung, Design und Programmierung. Erste Erfahrungen mit Unity, C#, Java und Netzwerktechnik.
         </p>
         <p class="lead" data-i="about.p2">
-          Ценю чистый код и ясные интерфейсы. Люблю, когда проект можно открыть с телефона и всё работает быстро.
+          Teamfähig, kreativ und bereit, neues Wissen in der Praxis anzuwenden.
         </p>
         <div style="margin-top:12px">
           <div class="muted" style="font-weight:800" data-i="about.skills">Навыки</div>
@@ -237,44 +236,99 @@
 <script>
 /* ====== i18n ====== */
 const I18N = {
-  ru:{nav:{projects:'Проекты',games:'Игры',about:'Обо мне',contact:'Контакты'},
-      hero:{title:'Привет! Я Орына — Game & App Developer',subtitle:'Unity 2D/3D, C#, UI/UX, прототипирование и подготовка к релизу.',
-            ctaProjects:'Смотреть проекты',ctaContact:'Связаться',
-            s1:'года Unity/C#',s2:'учебных проектов',s3:'языка: RU/DE/EN'},
-      projects:{title:'Сайты/проекты',subtitle:'Демо в новой вкладке. Preview — быстрое окно, Source — файл на GitHub.'},
-      games:{title:'Игры (Unity WebGL)',subtitle:'Положи сборку в /games/<GameName>/index.html и добавь в список.'},
-      about:{title:'Обо мне',p1:'Учусь на Game & Application Development. Делаю прототипы и маленькие игры на Unity (2D/3D), пишу на C#, рисую UI.',
-             p2:'Люблю чистый код и ясные интерфейсы. Всё должно работать и на телефоне.',
-             skills:'Навыки',tools:'Инструменты',cv:'Резюме (PDF)'},
-      contact:{title:'Контакты',subtitle:'Форма на Formspree. Я отвечу как можно скорее.',
-               name:'Имя',email:'Email',message:'Сообщение',send:'Отправить'},
-      labels:{demo:'Демо',preview:'Preview',source:'Исходник'}},
-  de:{nav:{projects:'Projekte',games:'Spiele',about:'Über mich',contact:'Kontakt'},
-      hero:{title:'Hallo! Ich bin Oryna — Game & App Developer',
-            subtitle:'Unity 2D/3D, C#, UI/UX, Prototyping & Release-Vorbereitung.',
-            ctaProjects:'Projekte ansehen',ctaContact:'Kontakt',
-            s1:'Jahre Unity/C#',s2:'Lern-Projekte',s3:'Sprachen: RU/DE/EN'},
-      projects:{title:'Webseiten/Projekte',subtitle:'Demo in neuem Tab. Preview = Schnelles Fenster, Source = Datei auf GitHub.'},
-      games:{title:'Spiele (Unity WebGL)',subtitle:'Lege Build in /games/<GameName>/index.html und füge es unten hinzu.'},
-      about:{title:'Über mich',p1:'Ich studiere Game & Application Development. Ich baue Prototypen & kleine Spiele in Unity (2D/3D), schreibe C#, entwerfe UI.',
-             p2:'Ich liebe sauberen Code und klare Interfaces. Alles soll auch mobil funktionieren.',
-             skills:'Skills',tools:'Tools',cv:'Lebenslauf (PDF)'},
-      contact:{title:'Kontakt',subtitle:'Formular über Formspree. Ich melde mich schnellstmöglich.',
-               name:'Name',email:'E-Mail',message:'Nachricht',send:'Senden'},
-      labels:{demo:'Demo',preview:'Vorschau',source:'Quelle'}},
-  en:{nav:{projects:'Projects',games:'Games',about:'About',contact:'Contact'},
-      hero:{title:"Hi! I'm Oryna — Game & App Developer",
-            subtitle:'Unity 2D/3D, C#, UI/UX, prototyping & release prep.',
-            ctaProjects:'See projects',ctaContact:'Contact',
-            s1:'years Unity/C#',s2:'learning projects',s3:'languages: RU/DE/EN'},
-      projects:{title:'Websites/Projects',subtitle:'Demo opens in new tab. Preview is a quick window, Source is GitHub file.'},
-      games:{title:'Games (Unity WebGL)',subtitle:'Put build into /games/<GameName>/index.html and add below.'},
-      about:{title:'About me',p1:'I study Game & App Development. I prototype and build small Unity (2D/3D) games, write C#, design UI.',
-             p2:'I value clean code & clear interfaces. Everything should work on phones too.',
-             skills:'Skills',tools:'Tools',cv:'Resume (PDF)'},
-      contact:{title:'Contact',subtitle:'Formspree form. I will reply soon.',
-               name:'Name',email:'Email',message:'Message',send:'Send'},
-      labels:{demo:'Demo',preview:'Preview',source:'Source'}}
+  ru:{
+    nav:{projects:'Проекты',games:'Игры',about:'Обо мне',contact:'Контакты'},
+    hero:{
+      title:'Привет! Я Орына — Game & App Developer',
+      subtitle:'Unity 2D/3D, C#, UI/UX, прототипирование и подготовка к релизу.',
+      ctaProjects:'Смотреть проекты',ctaContact:'Связаться',
+      s1:'года Unity/C#',s2:'учебных проектов',s3:'языка: RU/DE/EN'
+    },
+    projects:{
+      title:'Сайты/проекты',
+      subtitle:'Демо в новой вкладке. Preview — быстрое окно, Source — файл на GitHub.'
+    },
+    games:{
+      title:'Игры (Unity WebGL)',
+      subtitle:'Положи сборку в /games/<GameName>/index.html и добавь в список.'
+    },
+    about:{
+      title:'Обо мне',
+      p1:'Мотивированная студентка направления Game & Application Development, увлечённая разработкой игр, дизайном и программированием. Есть первые практические навыки работы с Unity, C#, Java и сетевыми технологиями.',
+      p2:'Умею работать в команде, креативная и готова применять новые знания на практике.',
+      skills:'Навыки',
+      tools:'Инструменты',
+      cv:'Резюме (PDF)'
+    },
+    contact:{
+      title:'Контакты',
+      subtitle:'Форма на Formspree. Я отвечу как можно скорее.',
+      name:'Имя',email:'Email',message:'Сообщение',send:'Отправить'
+    },
+    labels:{demo:'Демо',preview:'Preview',source:'Исходник'}
+  },
+  de:{
+    nav:{projects:'Projekte',games:'Spiele',about:'Über mich',contact:'Kontakt'},
+    hero:{
+      title:'Hallo! Ich bin Oryna — Game & App Developer',
+      subtitle:'Unity 2D/3D, C#, UI/UX, Prototyping & Release-Vorbereitung.',
+      ctaProjects:'Projekte ansehen',ctaContact:'Kontakt',
+      s1:'Jahre Unity/C#',s2:'Lern-Projekte',s3:'Sprachen: RU/DE/EN'
+    },
+    projects:{
+      title:'Webseiten/Projekte',
+      subtitle:'Demo in neuem Tab. Preview = Schnelles Fenster, Source = Datei auf GitHub.'
+    },
+    games:{
+      title:'Spiele (Unity WebGL)',
+      subtitle:'Lege Build in /games/<GameName>/index.html und füge es unten hinzu.'
+    },
+    about:{
+      title:'Über mich',
+      p1:'Motivierte Studentin im Bereich Game & Application Development mit Leidenschaft für Spieleentwicklung, Design und Programmierung. Erste Erfahrungen mit Unity, C#, Java und Netzwerktechnik.',
+      p2:'Teamfähig, kreativ und bereit, neues Wissen in der Praxis anzuwenden.',
+      skills:'Skills',
+      tools:'Tools',
+      cv:'Lebenslauf (PDF)'
+    },
+    contact:{
+      title:'Kontakt',
+      subtitle:'Formular über Formspree. Ich melde mich schnellstmöglich.',
+      name:'Name',email:'E-Mail',message:'Nachricht',send:'Senden'
+    },
+    labels:{demo:'Demo',preview:'Vorschau',source:'Quelle'}
+  },
+  en:{
+    nav:{projects:'Projects',games:'Games',about:'About',contact:'Contact'},
+    hero:{
+      title:"Hi! I'm Oryna — Game & App Developer",
+      subtitle:'Unity 2D/3D, C#, UI/UX, prototyping & release prep.',
+      ctaProjects:'See projects',ctaContact:'Contact',
+      s1:'years Unity/C#',s2:'learning projects',s3:'languages: RU/DE/EN'
+    },
+    projects:{
+      title:'Websites/Projects',
+      subtitle:'Demo opens in new tab. Preview is a quick window, Source is GitHub file.'
+    },
+    games:{
+      title:'Games (Unity WebGL)',
+      subtitle:'Put build into /games/<GameName>/index.html and add below.'
+    },
+    about:{
+      title:'About me',
+      p1:'Motivated Game & Application Development student with a passion for game development, design and programming. First hands-on experience with Unity, C#, Java and basic networking.',
+      p2:'Team player, creative, and eager to apply new knowledge in practice.',
+      skills:'Skills',
+      tools:'Tools',
+      cv:'Resume (PDF)'
+    },
+    contact:{
+      title:'Contact',
+      subtitle:'Formspree form. I will reply soon.',
+      name:'Name',email:'Email',message:'Message',send:'Send'
+    },
+    labels:{demo:'Demo',preview:'Preview',source:'Source'}
+  }
 };
 
 /* ====== data ====== */
@@ -289,7 +343,7 @@ const GAMES = [
   {title:'Penguin Jump (WebGL)',   file:'#', tags:['Unity','WebGL'], placeholder:'Noch nicht hinzugefügt'}
 ];
 const SKILLS = ['Unity','C#','UI/UX','UML','HTML','CSS','PHP','Git/GitHub'];
-const TOOLS  = ['Windows','VS Code / Rider','Photoshop','Illustrator','GitHub Pages'];
+const TOOLS  = ['VS Code','Photoshop','Illustrator','GitHub Pages'];
 
 /* ====== helpers ====== */
 const $ = (s,r=document)=>r.querySelector(s);
@@ -356,18 +410,32 @@ function applyI18n(lang){
 let lang = localStorage.getItem('lang') || (navigator.language||'ru').slice(0,2);
 if(!I18N[lang]) lang='ru';
 applyI18n(lang);
-$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>{ lang=b.dataset.lang; localStorage.setItem('lang',lang); applyI18n(lang); }));
+$$('[data-lang]').forEach(b=>b.addEventListener('click',()=>{
+  lang=b.dataset.lang;
+  localStorage.setItem('lang',lang);
+  applyI18n(lang);
+}));
 chips('#skills',SKILLS); chips('#tools',TOOLS);
 
 /* ====== modal preview ====== */
 const modal=$('#modal'), mTitle=$('#m-title'), mOpen=$('#m-open'), mSrc=$('#m-src'), mFrame=$('#m-frame');
 function openPreview(url,title){
-  mTitle.textContent=title; mOpen.href=url; mSrc.href=repoUrl(url)||'#'; if(!repoUrl(url)) mSrc.style.display='none'; else mSrc.style.display='';
-  mFrame.src=url; modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  mTitle.textContent=title;
+  mOpen.href=url;
+  const src = repoUrl(url);
+  if(!src){ mSrc.style.display='none'; }
+  else{ mSrc.style.display=''; mSrc.href=src; }
+  mFrame.src=url;
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
 }
 $('#m-close').addEventListener('click',closePreview);
 modal.addEventListener('click',e=>{ if(e.target===modal) closePreview(); });
-function closePreview(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); mFrame.src='about:blank'; }
+function closePreview(){
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  mFrame.src='about:blank';
+}
 
 /* ====== mobile drawer ====== */
 const hamb=$('#hamb'), drawer=$('#drawer');
