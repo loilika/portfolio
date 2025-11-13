@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PulseFit — Фитнес-клуб</title>
+  <title>PulseFit — Fitnessclub</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
   <style>
     html,body{background:#0b0b0e;color:#e5e7eb}
     .container-narrow{max-width:1120px}
@@ -21,20 +20,20 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#benefits" class="hover:text-white" data-i18n="navBenefits">Преимущества</a>
-        <a href="#classes" class="hover:text-white" data-i18n="navClasses">Курсы</a>
-        <a href="#trainers" class="hover:text-white" data-i18n="navCoaches">Тренеры</a>
-        <a href="#pricing" class="hover:text-white" data-i18n="navPricing">Цены</a>
-        <a href="#contact" class="hover:text-white" data-i18n="navContact">Контакт</a>
+        <a href="#benefits" class="hover:text-white" data-i18n="navBenefits">Vorteile</a>
+        <a href="#classes" class="hover:text-white" data-i18n="navClasses">Kursplan</a>
+        <a href="#trainers" class="hover:text-white" data-i18n="navCoaches">Trainer</a>
+        <a href="#pricing" class="hover:text-white" data-i18n="navPricing">Preise</a>
+        <a href="#contact" class="hover:text-white" data-i18n="navContact">Kontakt</a>
       </nav>
 
       <div class="flex items-center gap-3">
         <select id="lang" class="bg-zinc-900 text-sm border border-zinc-700 rounded-md px-2 py-1">
-          <option value="ru">RU</option>
           <option value="de">DE</option>
+          <option value="ru">RU</option>
           <option value="en">EN</option>
         </select>
-        <a href="#contact" class="hidden sm:inline-block px-3 py-1.5 rounded-md bg-emerald-500 text-zinc-900 font-semibold hover:bg-emerald-400 transition" data-i18n="btnLogin">Записаться</a>
+        <a href="#contact" class="hidden sm:inline-block px-3 py-1.5 rounded-md bg-emerald-500 text-zinc-900 font-semibold hover:bg-emerald-400 transition" data-i18n="btnLogin">Anmelden</a>
       </div>
     </div>
   </header>
@@ -46,127 +45,127 @@
       alt="gym hero" class="absolute inset-0 w-full h-full object-cover opacity-30" />
     <div class="relative mx-auto max-w-6xl px-4 md:px-6 py-24 md:py-36">
       <h1 class="text-4xl md:text-6xl font-black leading-tight max-w-4xl">
-        <span data-i18n="hero1">Твой ритм. Твоя сила.</span><br>
-        <span data-i18n="hero2">Твой</span> <span class="text-emerald-400">PulseFit</span>.
+        <span data-i18n="hero1">Dein Rhythmus. Deine Kraft.</span><br>
+        <span data-i18n="hero2">Dein</span> <span class="text-emerald-400">PulseFit</span>.
       </h1>
       <p class="mt-6 text-lg opacity-80 max-w-2xl" data-i18n="heroSub">
-        Современный фитнес-клуб с профи-тренерами, групповыми и персональными программами.
+        Moderner Fitnessclub mit Profi-Trainern, Gruppen- und Personalprogrammen.
       </p>
       <div class="flex gap-3 mt-8">
-        <a href="#classes" class="px-4 py-2 rounded-md bg-emerald-500 text-zinc-900 font-semibold hover:bg-emerald-400 transition" data-i18n="ctaChoose">Выбрать курс</a>
-        <a href="#trainers" class="px-4 py-2 rounded-md border border-zinc-700 hover:border-zinc-500 transition" data-i18n="ctaMeet">Познакомиться с тренерами</a>
+        <a href="#classes" class="px-4 py-2 rounded-md bg-emerald-500 text-zinc-900 font-semibold hover:bg-emerald-400 transition" data-i18n="ctaChoose">Kurs wählen</a>
+        <a href="#trainers" class="px-4 py-2 rounded-md border border-zinc-700 hover:border-zinc-500 transition" data-i18n="ctaMeet">Trainer kennenlernen</a>
       </div>
     </div>
   </section>
 
   <!-- Benefits -->
   <section id="benefits" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="benefitsTitle">Преимущества</h2>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="benefitsTitle">Vorteile</h2>
     <div class="mt-8 grid md:grid-cols-3 gap-6">
       <div class="rounded-xl border border-zinc-800 p-6">
-        <p class="text-xl font-semibold" data-i18n="b1">Профи-тренеры</p>
-        <p class="opacity-80 mt-2" data-i18n="b1d">Сертификация, опыт, индивидуальный подход.</p>
+        <p class="text-xl font-semibold" data-i18n="b1">Profi-Trainer</p>
+        <p class="opacity-80 mt-2" data-i18n="b1d">Zertifiziert, erfahren, individuell.</p>
       </div>
       <div class="rounded-xl border border-zinc-800 p-6">
-        <p class="text-xl font-semibold" data-i18n="b2">Современный зал</p>
-        <p class="opacity-80 mt-2" data-i18n="b2d">Силовые стойки, зона кроссфита, кардио, студия йоги.</p>
+        <p class="text-xl font-semibold" data-i18n="b2">Modernes Gym</p>
+        <p class="opacity-80 mt-2" data-i18n="b2d">Racks, CrossFit-Zone, Cardio, Yoga-Studio.</p>
       </div>
       <div class="rounded-xl border border-zinc-800 p-6">
-        <p class="text-xl font-semibold" data-i18n="b3">Гибкие тарифы</p>
-        <p class="opacity-80 mt-2" data-i18n="b3d">Помесячно или год — выбирай, как удобно.</p>
+        <p class="text-xl font-semibold" data-i18n="b3">Flexible Tarife</p>
+        <p class="opacity-80 mt-2" data-i18n="b3d">Monatlich oder jährlich – wie es passt.</p>
       </div>
     </div>
   </section>
 
   <!-- Classes -->
   <section id="classes" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="classesTitle">Направления</h2>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="classesTitle">Kursplan</h2>
     <div id="classesGrid" class="mt-8 grid md:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- Trainers -->
   <section id="trainers" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="trainersTitle">Команда тренеров</h2>
-    <p class="opacity-80 mt-2" data-i18n="trainersSub">Нажми «Подробнее», чтобы узнать биографию и специализацию.</p>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="trainersTitle">Trainerteam</h2>
+    <p class="opacity-80 mt-2" data-i18n="trainersSub">Klicke „Mehr“, um Bio und Spezialisierung zu sehen.</p>
 
     <div id="trainersGrid" class="mt-8 grid md:grid-cols-3 gap-6"></div>
   </section>
 
   <!-- Gallery -->
   <section id="gallery" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="galleryTitle">Галерея</h2>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="galleryTitle">Galerie</h2>
     <div id="galleryGrid" class="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4"></div>
   </section>
 
-  <!-- PRICING (твоя версия, с выравниванием) -->
+  <!-- PRICING -->
   <section id="pricing" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="pricingTitle">Тарифы</h2>
-    <p class="mt-2 opacity-80" data-i18n="pricingSubtitle">Выбирай срок и экономь.</p>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="pricingTitle">Preise</h2>
+    <p class="mt-2 opacity-80" data-i18n="pricingSubtitle">Wähle die Laufzeit und spare.</p>
 
     <div class="grid md:grid-cols-3 gap-6 mt-8">
       <div class="rounded-xl border border-zinc-800 p-6 flex flex-col">
-        <h3 class="text-xl font-semibold" data-i18n="p1Name">1 месяц</h3>
+        <h3 class="text-xl font-semibold" data-i18n="p1Name">1 Monat</h3>
         <p class="text-3xl font-black mt-2">39€</p>
         <ul class="mt-3 space-y-1 opacity-80 text-sm">
-          <li data-i18n="pCommon1">Доступ в зал 7:00–23:00</li>
-          <li data-i18n="pCommon2">Групповые занятия 2р/нед</li>
-          <li data-i18n="pCommon3">Вода и полотенце</li>
+          <li data-i18n="pCommon1">Zugang 7:00–23:00</li>
+          <li data-i18n="pCommon2">Gruppenkurse 2x/Woche</li>
+          <li data-i18n="pCommon3">Wasser & Handtuch</li>
         </ul>
-        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Купить</a>
+        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Kaufen</a>
       </div>
 
       <div class="rounded-xl border border-zinc-800 p-6 ring-2 ring-emerald-500/50 flex flex-col">
-        <h3 class="text-xl font-semibold" data-i18n="p2Name">3 месяца</h3>
+        <h3 class="text-xl font-semibold" data-i18n="p2Name">3 Monate</h3>
         <p class="text-3xl font-black mt-2">99€</p>
         <ul class="mt-3 space-y-1 opacity-80 text-sm">
-          <li data-i18n="pCommon1">Доступ в зал 7:00–23:00</li>
-          <li data-i18n="pCommon2">Групповые занятия 2р/нед</li>
-          <li data-i18n="p2Bonus">+ 1 персональная тренировка</li>
+          <li data-i18n="pCommon1">Zugang 7:00–23:00</li>
+          <li data-i18n="pCommon2">Gruppenkurse 2x/Woche</li>
+          <li data-i18n="p2Bonus">+ 1 Personal Training</li>
         </ul>
-        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Купить</a>
+        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Kaufen</a>
       </div>
 
       <div class="rounded-xl border border-zinc-800 p-6 flex flex-col">
-        <h3 class="text-xl font-semibold" data-i18n="p3Name">12 месяцев</h3>
+        <h3 class="text-xl font-semibold" data-i18n="p3Name">12 Monate</h3>
         <p class="text-3xl font-black mt-2">299€</p>
         <ul class="mt-3 space-y-1 opacity-80 text-sm">
-          <li data-i18n="pCommon1">Доступ в зал 7:00–23:00</li>
-          <li data-i18n="pCommon2">Групповые занятия 2р/нед</li>
-          <li data-i18n="p3Bonus">+ 6 персональных тренировок</li>
+          <li data-i18n="pCommon1">Зugang 7:00–23:00</li>
+          <li data-i18n="pCommon2">Gruppenkurse 2x/Woche</li>
+          <li data-i18n="p3Bonus">+ 6 Personal Trainings</li>
         </ul>
-        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Купить</a>
+        <a href="#contact" class="mt-4 inline-block px-4 py-2 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnBuy">Kaufen</a>
       </div>
     </div>
   </section>
 
   <!-- CONTACT (Formspree) -->
   <section id="contact" class="mx-auto max-w-6xl px-4 md:px-6 py-16">
-    <h2 class="text-3xl md:text-4xl font-black" data-i18n="contactTitle">Связаться с нами</h2>
-    <p class="mt-2 opacity-80" data-i18n="contactSubtitle">Оставь заявку — подберём формат и тренера.</p>
+    <h2 class="text-3xl md:text-4xl font-black" data-i18n="contactTitle">Kontakt</h2>
+    <p class="mt-2 opacity-80" data-i18n="contactSubtitle">Schreib uns – wir finden Format & Trainer.</p>
 
     <form class="mt-8 grid md:grid-cols-2 gap-4 rounded-xl border border-zinc-800 p-6"
           action="https://formspree.io/f/manayvwg" method="POST">
       <input name="name" required class="px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700"
-             placeholder="Имя" data-i18n-placeholder="phName" />
+             placeholder="Name" data-i18n-placeholder="phName" />
       <input name="email" required type="email" class="px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700"
-             placeholder="Email" data-i18n-placeholder="phEmail" />
+             placeholder="E-Mail" data-i18n-placeholder="phEmail" />
       <input name="phone" class="px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700"
-             placeholder="Телефон" data-i18n-placeholder="phPhone" />
+             placeholder="Telefon" data-i18n-placeholder="phPhone" />
       <select name="interest" class="px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700">
-        <option value="strength" data-i18n="contactOpt1">Силовой тренинг</option>
-        <option value="yoga" data-i18n="contactOpt2">Йога</option>
-        <option value="hiit" data-i18n="contactOpt3">HIIT / жиросжигание</option>
+        <option value="strength" data-i18n="contactOpt1">Krafttraining</option>
+        <option value="yoga" data-i18n="contactOpt2">Yoga</option>
+        <option value="hiit" data-i18n="contactOpt3">HIIT / Fettverbrennung</option>
       </select>
       <textarea name="message" rows="4" class="md:col-span-2 px-3 py-2 rounded-md bg-zinc-900 border border-zinc-700"
-                placeholder="Сообщение" data-i18n-placeholder="phMsg"></textarea>
-      <button class="md:col-span-2 justify-self-start px-5 py-3 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnSend">Отправить</button>
+                placeholder="Nachricht" data-i18n-placeholder="phMsg"></textarea>
+      <button class="md:col-span-2 justify-self-start px-5 py-3 rounded-md bg-emerald-500 text-zinc-950 font-semibold hover:bg-emerald-400 transition" data-i18n="btnSend">Senden</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer class="border-t border-zinc-800">
     <div class="mx-auto max-w-6xl px-4 md:px-6 py-8 text-sm opacity-80">
-      © <span id="year"></span> PulseFit. <span data-i18n="footer">Все права защищены.</span>
+      © <span id="year"></span> PulseFit. <span data-i18n="footer">Alle Rechte vorbehalten.</span>
     </div>
   </footer>
 
@@ -191,54 +190,90 @@
     // Data
     const CLASSES = [
       {
-        title: {ru:'Силовой тренинг', de:'Krafttraining', en:'Strength'},
-        desc:  {ru:'База, техника, прогрессия.', de:'Grundübungen & Technik.', en:'Compounds & technique.'},
-        img: 'https://images.unsplash.com/photo-1549062572-544a64fb0fd2?q=80&w=1200&auto=format&fit=crop'
+        title: {de:'Krafttraining', ru:'Силовой тренинг', en:'Strength'},
+        desc:  {de:'Grundübungen & Technik.', ru:'База, техника, прогрессия.', en:'Compounds & technique.'},
+        img: 'Krafttraining.jpg'
       },
       {
-        title: {ru:'Йога & Мобилити', de:'Yoga & Mobility', en:'Yoga & Mobility'},
-        desc:  {ru:'Баланс, гибкость, дыхание.', de:'Balance, Flexibilität, Atmung.', en:'Balance, flexibility, breath.'},
+        title: {de:'Yoga & Mobility', ru:'Йога & Мобилити', en:'Yoga & Mobility'},
+        desc:  {de:'Balance, Flexibilität, Atmung.', ru:'Баланс, гибкость, дыхание.', en:'Balance, flexibility, breath.'},
         img: 'https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=1200&auto=format&fit=crop'
       },
       {
-        title: {ru:'HIIT', de:'HIIT', en:'HIIT'},
-        desc:  {ru:'Интервалы, жиросжигание.', de:'Intervalle & Fatburn.', en:'Intervals & fat burn.'},
-        img: 'https://images.unsplash.com/photo-1518459031867-a89b944bffe0?q=80&w=1200&auto=format&fit=crop'
+        title: {de:'HIIT', ru:'HIIT', en:'HIIT'},
+        desc:  {de:'Intervalle & Fatburn.', ru:'Интервалы, жиросжигание.', en:'Intervals & fat burn.'},
+        img: 'HIIT.webp'
       }
     ];
 
     const TRAINERS = [
       {
-        name:'Антон', role:{ru:'Кроссфит, силовой тренинг', de:'CrossFit, Krafttraining', en:'CrossFit, Strength'},
-        photo:'https://images.unsplash.com/photo-1596357395104-5b2a75a88a34?q=80&w=1200&auto=format&fit=crop',
-        bio:{ru:'КМС по пауэрлифтингу. 8 лет стажа.', de:'PL-Athlet, 8 Jahre Erfahrung.', en:'Powerlifting background, 8y exp.'},
-        tags:[{ru:'Пауэрлифтинг',de:'Powerlifting',en:'Powerlifting'},{ru:'Гипертрофия',de:'Hypertrophie',en:'Hypertrophy'}]
+        name:{de:'Anton', ru:'Антон', en:'Anton'},
+        role:{de:'CrossFit, Krafttraining', ru:'Кроссфит, силовой тренинг', en:'CrossFit, Strength'},
+        photo:'Anton.jpg',
+        bio:{
+          de:'PL-Athlet, 8 Jahre Erfahrung.',
+          ru:'КМС по пауэрлифтингу. 8 лет стажа.',
+          en:'Powerlifting background, 8 years of experience.'
+        },
+        tags:[
+          {de:'Powerlifting', ru:'Пауэрлифтинг', en:'Powerlifting'},
+          {de:'Hypertrophie', ru:'Гипертрофия', en:'Hypertrophy'}
+        ]
       },
       {
-        name:'Лера', role:{ru:'Йога, дыхательные практики', de:'Yoga, Atemtechniken', en:'Yoga, breathwork'},
+        name:{de:'Lera', ru:'Лера', en:'Lera'},
+        role:{de:'Yoga, Atemtechniken', ru:'Йога, дыхательные практики', en:'Yoga, breathwork'},
         photo:'https://images.unsplash.com/photo-1552196563-55cd4e45efb3?q=80&w=1200&auto=format&fit=crop',
-        bio:{ru:'500-часов RYT, хэндстэнд, гибкость.',de:'500h RYT, Handstand, Flexibilität.',en:'500h RYT, handstand, flexibility.'},
-        tags:[{ru:'Мобилити',de:'Mobility',en:'Mobility'},{ru:'Баланс',de:'Balance',en:'Balance'}]
+        bio:{
+          de:'500h RYT, Handstand, Flexibilität.',
+          ru:'500-часов RYT, хэндстэнд, гибкость.',
+          en:'500h RYT, handstand, flexibility.'
+        },
+        tags:[
+          {de:'Mobility', ru:'Мобилити', en:'Mobility'},
+          {de:'Balance', ru:'Баланс', en:'Balance'}
+        ]
       },
       {
-        name:'Денис', role:{ru:'HIIT, выносливость', de:'HIIT, Ausdauer', en:'HIIT, endurance'},
-        photo:'https://images.unsplash.com/photo-1543975200-8e313fb04a7b?q=80&w=1200&auto=format&fit=crop',
-        bio:{ru:'Функциональный тренинг, интервалы, жиросжигание.',de:'Functional, Intervalle, Fatburn.',en:'Functional, intervals, fat loss.'},
-        tags:[{ru:'Интервалы',de:'Intervalle',en:'Intervals'},{ru:'Кардио',de:'Cardio',en:'Cardio'}]
+        name:{de:'Denis', ru:'Денис', en:'Denis'},
+        role:{de:'HIIT, Ausdauer', ru:'HIIT, выносливость', en:'HIIT, endurance'},
+        photo:'Dennis.avif',
+        bio:{
+          de:'Functional, Intervalle, Fatburn.',
+          ru:'Функциональный тренинг, интервалы, жиросжигание.',
+          en:'Functional training, intervals, fat loss.'
+        },
+        tags:[
+          {de:'Intervalle', ru:'Интервалы', en:'Intervals'},
+          {de:'Cardio', ru:'Кардио', en:'Cardio'}
+        ]
       }
     ];
 
+    
     const GALLERY = [
-      'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1526401485004-2fda9f4b5fd7?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1527933053326-89d1746b76d0?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1546484959-f9a53db89d03?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1540497077202-7c8a1c7b7b96?q=80&w=1200&auto=format&fit=crop'
-    ];
+  // 1
+  'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=1200&auto=format&fit=crop',
+  // 2
+  'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop',
+  // 3 – твоя картинка
+  '3.jpg',
+  // 4 – твоя картинка
+  '4.jpg',
+  // 5
+  'https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?q=80&w=1200&auto=format&fit=crop',
+  // 6
+  'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1200&auto=format&fit=crop',
+  // 7 – твоя картинка
+  '7.jpg',
+  // 8
+  'https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=1200&auto=format&fit=crop',
+  // 9 – твоя картинка
+  '9.jpg'
+];
+
+
 
     // Render helpers
     const $ = s => document.querySelector(s);
@@ -265,17 +300,17 @@
       TRAINERS.forEach((t,idx)=>{
         box.innerHTML += `
           <div class="rounded-xl border border-zinc-800 overflow-hidden flex flex-col">
-            <div class="h-56"><img src="${t.photo}" class="w-full h-full object-cover" alt="${t.name}"></div>
+            <div class="h-56"><img src="${t.photo}" class="w-full h-full object-cover" alt="${t.name[lang]}"></div>
             <div class="p-6 flex-1 flex flex-col">
-              <h3 class="text-xl font-semibold">${t.name}</h3>
+              <h3 class="text-xl font-semibold">${t.name[lang]}</h3>
               <p class="opacity-80 mt-1">${t.role[lang]}</p>
-              <button data-i="${idx}" class="mt-4 self-start px-4 py-2 rounded-md border border-zinc-700 hover:border-zinc-500 transition trainer-more" data-i18n="btnMore">Подробнее</button>
+              <button data-index="${idx}" class="mt-4 self-start px-4 py-2 rounded-md border border-zinc-700 hover:border-zinc-500 transition trainer-more" data-i18n="btnMore">Mehr</button>
             </div>
           </div>`;
       });
       $$('.trainer-more').forEach(btn=>{
         btn.addEventListener('click',e=>{
-          const i = +e.currentTarget.dataset.i;
+          const i = +e.currentTarget.getAttribute('data-index');
           openTrainerModal(i);
         });
       });
@@ -296,7 +331,7 @@
     function openTrainerModal(i){
       const t = TRAINERS[i];
       $('#mPhoto').src = t.photo;
-      $('#mName').textContent = t.name;
+      $('#mName').textContent = t.name[currentLang];
       $('#mSubtitle').textContent = t.role[currentLang];
       $('#mBio').textContent = t.bio[currentLang];
       const tags = t.tags.map(tag=>`<span class="px-2 py-1 rounded-md bg-zinc-800 text-xs">${tag[currentLang]}</span>`).join('');
@@ -395,7 +430,7 @@
       renderTrainers(lang);
     }
 
-    let currentLang = 'ru';
+    let currentLang = 'de';
     const langSel = $('#lang');
     langSel.value = currentLang;
     langSel.addEventListener('change', ()=>{
