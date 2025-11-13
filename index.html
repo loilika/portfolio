@@ -34,7 +34,15 @@
   .hamb{display:none;margin-left:auto;border:1px solid #2a3b66;background:#0b1633;color:#fff;border-radius:10px;padding:8px 10px}
   @media (max-width:820px){ nav{display:none} .hamb{display:block} .lang{margin-left:0}}
   .drawer{display:none}
-  .drawer.open{display:block;position:fixed;inset:56px 0 0 0;background:#0b1228ee;backdrop-filter:blur(6px);z-index:30}
+  .drawer.open{
+    display:block;
+    position:fixed;
+    inset:0;
+    background:#050819;
+    backdrop-filter:blur(8px);
+    z-index:60;
+    padding-top:56px;
+  }
   .drawer a{display:block;padding:14px 18px;border-bottom:1px solid #1b2a4b}
 
   main{max-width:1200px;margin:auto;padding:20px 16px}
@@ -56,7 +64,17 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:14px}
   .card{border:1px solid var(--edge);background:#0f1936;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
   .shot{position:relative;background:#0a132b;height:170px}
-  .shot iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none}
+  .shot iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .shot-empty{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:12px;
+    text-align:center;
+    font-size:.9rem;
+    color:var(--muted);
+  }
   .body{padding:12px}
   .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
   .tag{display:inline-block;font-size:.72rem;color:#0b1330;background:#d6e6ff;border-radius:999px;padding:4px 8px;font-weight:800}
@@ -164,7 +182,7 @@
           Учусь на Game & Application Development. Делаю прототипы и маленькие игры на Unity (2D/3D), пишу на C#, рисую UI, собираю сайты и порталы на чистом HTML/CSS/JS.
         </p>
         <p class="lead" data-i="about.p2">
-          Ценю чистый код и ясные интерфейсы.
+          Ценю чистый код и ясные интерфейсы. Люблю, когда проект можно открыть с телефона и всё работает быстро.
         </p>
         <div style="margin-top:12px">
           <div class="muted" style="font-weight:800" data-i="about.skills">Навыки</div>
@@ -267,8 +285,8 @@ const SITES = [
   {title:'Luma Studio — Lamp Builder', file:'index5.html', tags:['Configurator','SVG','Export']}
 ];
 const GAMES = [
-  {title:'Flight or Fate (WebGL)', file:'games/FlightOrFate/index.html', tags:['Unity','WebGL']},
-  {title:'Penguin Jump (WebGL)',   file:'games/PenguinJump/index.html',   tags:['Unity','WebGL']}
+  {title:'Flight or Fate (WebGL)', file:'#', tags:['Unity','WebGL'], placeholder:'Noch nicht hinzugefügt'},
+  {title:'Penguin Jump (WebGL)',   file:'#', tags:['Unity','WebGL'], placeholder:'Noch nicht hinzugefügt'}
 ];
 const SKILLS = ['Unity','C#','UI/UX','UML','HTML','CSS','PHP','Git/GitHub'];
 const TOOLS  = ['Windows','VS Code / Rider','Photoshop','Illustrator','GitHub Pages'];
@@ -288,19 +306,28 @@ function repoUrl(path){
 }
 
 function card(item, t){
-  const demo=item.file, src=repoUrl(item.file);
-  const tags=(item.tags||[]).map(x=>`<span class="tag">${x}</span>`).join('');
-  return `
-  <article class="card">
-    <div class="shot"><iframe src="${demo}" loading="lazy" title="${item.title} preview"></iframe></div>
-    <div class="body">
-      <div style="font-weight:900">${item.title}</div>
-      <div class="tags">${tags}</div>
+  const demo = item.file;
+  const src  = item.placeholder ? null : repoUrl(item.file);
+  const tags = (item.tags || []).map(x => `<span class="tag">${x}</span>`).join('');
+
+  const previewBlock = item.placeholder
+    ? `<div class="shot"><div class="shot-empty">${item.placeholder}</div></div>`
+    : `<div class="shot"><iframe src="${demo}" loading="lazy" title="${item.title} preview"></iframe></div>`;
+
+  const buttons = item.placeholder ? '' : `
       <div class="row">
         <a class="btn-min primary" href="${demo}" target="_blank" rel="noopener">${t.labels.demo}</a>
         <button class="btn-min" data-preview="${demo}" data-title="${item.title}">${t.labels.preview}</button>
-        ${src?`<a class="btn-min" href="${src}" target="_blank" rel="noopener">${t.labels.source}</a>`:''}
-      </div>
+        ${src ? `<a class="btn-min" href="${src}" target="_blank" rel="noopener">${t.labels.source}</a>` : ''}
+      </div>`;
+
+  return `
+  <article class="card">
+    ${previewBlock}
+    <div class="body">
+      <div style="font-weight:900">${item.title}</div>
+      <div class="tags">${tags}</div>
+      ${buttons}
     </div>
   </article>`;
 }
@@ -349,4 +376,3 @@ drawer.addEventListener('click',()=> drawer.classList.remove('open'));
 </script>
 </body>
 </html>
-
